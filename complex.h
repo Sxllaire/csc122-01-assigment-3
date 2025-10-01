@@ -20,32 +20,32 @@ private:
     double imag;
 
 public:
-    // Constructors
-    Complex();                      // Default constructor
-    Complex(double r, double i);    // Parameterized constructor
+    // constructors
+    Complex();
+    Complex(double r, double i);
 
-    // Accessors
+    // accessors
     double getReal() const;
     double getImag() const;
 
-    // Mutators
+    // mutators
     void setReal(double r);
     void setImag(double i);
 
-    // Arithmetic Operators
+    // arithmetic operator
     Complex operator+(const Complex& other) const;
     Complex operator-(const Complex& other) const;
     Complex operator*(const Complex& other) const;
     Complex operator/(const Complex& other) const;
 
-    // Unary negation
+    // negation
     Complex operator-() const;
 
-    // Special Operations
+    // special operations
     double magnitude() const;
     Complex conjugate() const;
 
-    // Friend functions for I/O
+    // functions for I/O
     friend std::ostream& operator<<(std::ostream& out, const Complex& c);
     friend std::istream& operator>>(std::istream& in, Complex& c);
 };
