@@ -10,12 +10,12 @@
 
 #include "Complex.h"
 
-// Constructors
+// constructors
 Complex::Complex() : real(0), imag(0) {}
 
 Complex::Complex(double r, double i) : real(r), imag(i) {}
 
-// Accessors
+// accessors
 double Complex::getReal() const {
     return real;
 }
@@ -24,7 +24,7 @@ double Complex::getImag() const {
     return imag;
 }
 
-// Mutators
+// mutators
 void Complex::setReal(double r) {
     real = r;
 }
@@ -33,7 +33,7 @@ void Complex::setImag(double i) {
     imag = i;
 }
 
-// Arithmetic Operators
+// oerators
 Complex Complex::operator+(const Complex& other) const {
     return Complex(real + other.real, imag + other.imag);
 }
@@ -55,12 +55,12 @@ Complex Complex::operator/(const Complex& other) const {
     return Complex(r, i);
 }
 
-// Unary negation
+// negation
 Complex Complex::operator-() const {
     return Complex(-real, -imag);
 }
 
-// Special Operations
+// special operations
 double Complex::magnitude() const {
     return std::sqrt(real * real + imag * imag);
 }
@@ -69,7 +69,6 @@ Complex Complex::conjugate() const {
     return Complex(real, -imag);
 }
 
-// I/O
 std::ostream& operator<<(std::ostream& out, const Complex& c) {
     out << c.real;
     if (c.imag >= 0)
